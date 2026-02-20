@@ -18,17 +18,17 @@
 ┃   ┃   ┣ - id: int
 ┃   ┃   ┣ - name: String
 ┃   ┃   ┣ - salary: double
-┃   ┃   ┣ - department: Department      <-- [Relasi: Aggregation (Has-a)]
-┃   ┃   ┗ - type: EmploymentType        <-- [Relasi: Aggregation (Has-a)]
+┃   ┃   ┣ - department: Department
+┃   ┃   ┗ - type: EmploymentType
 ┃   ┃
 ┃   ┗ ➕ Methods:
 ┃       ┣ + Employee(id, name, dept, type, salary)
 ┃       ┣ + static getTotalEmployees(): int
-┃       ┗ + getId(), getName(), getDepartment(), getType(), getSalary()...
+┃       ┗ + getId(), getName(), getDepartment(), getType(), getSalary()
 ┃
 ┗ 📂 package: id.ac.polban.employee.service
   ┃
-  ┗ 📜 Class: EmployeeService           <-- [Relasi: Dependency (Uses Employee)]
+  ┗ 📜 Class: EmployeeService
     ┣ ➖ Attribute: - employees: Map<Integer, Employee>
     ┗ ➕ Methods  : + addEmployee(emp: Employee): void
                     + getEmployee(id: int): Employee
