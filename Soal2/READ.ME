@@ -1,0 +1,36 @@
+'''
+📦 Project: Employee System
+┣ 📂 package: id.ac.polban.employee.model
+┃ ┃
+┃ ┣ 📜 Class: Department
+┃ ┃ ┣ ➖ Attribute: - name: String
+┃ ┃ ┗ ➕ Methods  : + Department(name)
+┃ ┃                 + getName(), setName()
+┃ ┃
+┃ ┣ 📜 Class: EmploymentType
+┃ ┃ ┣ ➖ Attribute: - type: String
+┃ ┃ ┗ ➕ Methods  : + EmploymentType(type)
+┃ ┃                 + getType(), setType()
+┃ ┃
+┃ ┗ 📜 Class: Employee
+┃   ┣ ➖ Attributes:
+┃   ┃   ┣ - static totalEmployees: int
+┃   ┃   ┣ - id: int
+┃   ┃   ┣ - name: String
+┃   ┃   ┣ - salary: double
+┃   ┃   ┣ - department: Department      <-- [Relasi: Aggregation (Has-a)]
+┃   ┃   ┗ - type: EmploymentType        <-- [Relasi: Aggregation (Has-a)]
+┃   ┃
+┃   ┗ ➕ Methods:
+┃       ┣ + Employee(id, name, dept, type, salary)
+┃       ┣ + static getTotalEmployees(): int
+┃       ┗ + getId(), getName(), getDepartment(), getType(), getSalary()...
+┃
+┗ 📂 package: id.ac.polban.employee.service
+  ┃
+  ┗ 📜 Class: EmployeeService           <-- [Relasi: Dependency (Uses Employee)]
+    ┣ ➖ Attribute: - employees: Map<Integer, Employee>
+    ┗ ➕ Methods  : + addEmployee(emp: Employee): void
+                    + getEmployee(id: int): Employee
+                    + raiseSalary(id: int, percent: double): void
+'''
